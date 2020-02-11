@@ -1,0 +1,29 @@
+{
+  "name": "load-balancer-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc",
+    "build:dev": "npx tsc --watch",
+    "load_test:credit_scores": "node ./js/utils/load_test.js",
+    "start:credit_scores": "node ./js/services/credit_scores/src/index.js",
+    "start:balancer": "node ./js/balancer/src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/ioredis": "^4.14.7",
+    "argparse": "^1.0.10",
+    "axios": "^0.19.2",
+    "chalk": "^3.0.0",
+    "express": "^4.17.1",
+    "ioredis": "^4.14.1"
+  },
+  "devDependencies": {
+    "@types/argparse": "^1.0.38",
+    "@types/express": "^4.17.2",
+    "typescript": "^3.7.5"
+  }
+}
