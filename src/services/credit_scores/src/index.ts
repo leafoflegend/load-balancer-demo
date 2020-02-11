@@ -10,7 +10,7 @@ import {
 import { CreditReport, RequestWithBody } from './types';
 
 if (cluster.isWorker) {
-  console.log(chalk.bgMagenta(`Worker started. Worker PID: ${process.pid}`));
+  console.log(chalk.magenta(`Worker started. Worker PID: ${process.pid}`));
 }
 
 const PORT = process.env.PORT || 3000;
@@ -70,5 +70,5 @@ app.get('/:ssn', async (req: RequestWithBody, res, _next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(chalk.greenBright(`Application successfully started on PORT ${PORT}`));
+  console.log(chalk.greenBright(`Application PID ${process.pid} now listening on PORT ${PORT}`));
 });

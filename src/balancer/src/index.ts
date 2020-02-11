@@ -3,7 +3,7 @@ import chalk from 'chalk';
 import cluster from 'cluster';
 
 if (cluster.isMaster) {
-  console.log(chalk.greenBright(`Master process started: pid ${process.pid}`));
+  console.log(chalk.greenBright(`Master process started PID ${process.pid}`));
 
   const cpus = os.cpus();
 
