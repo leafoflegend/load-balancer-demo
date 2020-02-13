@@ -20,6 +20,14 @@ app.use(express.json());
 
 const redis = new Redis();
 
+let requestNumber = 0;
+
+app.use((req, _res, next) => {
+  ++requestNumber;
+  console.log(chalk.gray(`PID ${process.pid}: Request #${requestNumber} to ${req.path}`));
+  next();
+});
+
 app.get('/health', (_req, res) => {
   res.send({
     healthy: true,

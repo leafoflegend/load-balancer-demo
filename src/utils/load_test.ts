@@ -11,7 +11,7 @@ const parser = new ArgumentParser({
 parser.addArgument(
   ['--load', '-l'],
   {
-    defaultValue: 1000,
+    defaultValue: 3000,
     help: 'An integer representing the number of requests to send.',
     type: 'int',
   }
@@ -76,9 +76,8 @@ const runLoadTest = () => {
           success: true,
         };
       })
-      .catch(e => {
+      .catch(() => {
         console.log(chalk.yellow(`Error on request ${requestNum}.`));
-        console.error(e);
 
         const totalTime = Date.now() - startTime;
         responses[requestNum] = {

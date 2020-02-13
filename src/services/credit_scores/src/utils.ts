@@ -12,9 +12,9 @@ type GenBureauScores = (startingCredit: number, range: number) => {
 }
 const genBureauScores: GenBureauScores = (startingCredit, range) => {
   return {
-    Equifax: startingCredit * (Math.random() * range),
-    Transunion: startingCredit * (Math.random() * range),
-    Experian: startingCredit * (Math.random() * range),
+    Equifax: startingCredit * (1 + (Math.random() * range)),
+    Transunion: startingCredit * (1 + (Math.random() * range)),
+    Experian: startingCredit * (1 + (Math.random() * range)),
   }
 };
 

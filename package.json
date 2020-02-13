@@ -8,7 +8,8 @@
     "build:dev": "npx tsc --watch",
     "load_test:credit_scores": "node ./js/utils/load_test.js",
     "start:credit_scores": "node ./js/services/credit_scores/src/index.js",
-    "start:balancer": "node ./js/balancer/src/index.js"
+    "start:cpu_balancer": "node ./js/cpu_balancer/src/index.js",
+    "start:network_balancer": "node ./js/network_balancer/src/index.js"
   },
   "keywords": [],
   "author": "",
